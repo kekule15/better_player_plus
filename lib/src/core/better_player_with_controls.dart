@@ -92,7 +92,8 @@ class _BetterPlayerWithControlsState extends State<BetterPlayerWithControls> {
 
     aspectRatio ??= 16 / 9;
     final innerContainer = Container(
-      width: double.infinity,
+      width: MediaQuery.sizeOf(context).width,
+      height: MediaQuery.sizeOf(context).height,
       color: betterPlayerController
           .betterPlayerConfiguration.controlsConfiguration.backgroundColor,
       child: AspectRatio(
